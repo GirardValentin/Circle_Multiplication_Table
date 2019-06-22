@@ -2,7 +2,7 @@
 Times Table Visualization
 
 The basic idea is to:
-  -draw a circle
+  -draw a circle \n
   -define n points equitably spaced
   -list the points 
   -draw a line between point n to point n * the multiplication table to visualize(mt)
