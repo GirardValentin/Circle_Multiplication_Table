@@ -4,23 +4,23 @@
 // Press > to see next multiplication table
 //       < to see previous
 
-raduis = 150;
+r = 150;
 points = 200;
-timestep = 0;
+mt = 0;
 
 function setup() {
   createCanvas(400, 400);
 }
 
 function mousePressed(){
-  save(timestep + ".jpg");
+  save(mt + ".jpg");
 }
 
 function keyPressed(){
   if (keyCode == LEFT_ARROW){
-    timestep -= 1;
+    mt -= 1;
   } else if (keyCode == RIGHT_ARROW){
-    timestep += 1;  
+    mt += 1;  
   }
 }
 
@@ -38,12 +38,12 @@ function draw() {
     x = cos(a) * r;
     y = sin(a) * r;
     vertex(x,y);
-    newx = cos(a*timestep) * r;
-    newy = sin(a*timestep) * r;
+    newx = cos(a*mt) * r;
+    newy = sin(a*mt) * r;
     line(x,y,newx,newy);
   }
   endShape(CLOSE);
   
-  text("Multiplication Table of : " + timestep,-60,180);
+  text("Multiplication Table of : " + mt,-60,180);
 
 }
